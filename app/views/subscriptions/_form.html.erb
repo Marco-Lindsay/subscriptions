@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :subscriber_id %><br>
-    <%= f.number_field :subscriber_id %>
+    <%= f.select :subscriber_id, Subscriber.all.collect {|x| [x.name, x.id] }, include_blank: true %><br>
   </div>
   <div class="field">
-    <%= f.label :magazine_id %><br>
-    <%= f.number_field :magazine_id %>
+    <%= f.select :magazine_id, Magazine.all.collect {|x| [x.title, x.id] },  include_blank: true %><br>
   </div>
   <div class="field">
     <%= f.label :length %><br>

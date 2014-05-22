@@ -13,8 +13,8 @@
   <tbody>
     <% @subscriptions.each do |subscription| %>
       <tr>
-        <td><%= subscription.subscriber_id %></td>
-        <td><%= subscription.magazine_id %></td>
+        <td><%= subscription.subscriber.name %></td>
+        <td><%= subscription.magazine.title %></td>
         <td><%= subscription.length %></td>
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
@@ -27,3 +27,6 @@
 <br>
 
 <%= link_to 'New Subscription', new_subscription_path %>
+<%= link_to 'New Subscriber', new_subscriber_path %>
+<%= link_to 'New Magazine', new_magazine_path %>
+
