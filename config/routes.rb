@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :magazines
+
   resources :subscribers
 
   # The priority is based upon order of creation: first created -> highest priority.
